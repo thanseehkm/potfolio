@@ -361,31 +361,36 @@ class Homepage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Center(
-                                        child: Text(
-                                          'Resume',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15),
+                                InkWell(
+                                  onTap: () => launchUrl(Uri.parse(
+                                      'https://github.com/thanseehkm/potfolio/blob/master/asset/Thanseeh_Resume.pdf')),
+                                  child: Container(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Center(
+                                          child: Text(
+                                            'Resume',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15),
+                                          ),
                                         ),
-                                      ),
-                                      Icon(
-                                        Icons.file_download_outlined,
-                                        color: Colors.white,
-                                      )
-                                    ],
+                                        Icon(
+                                          Icons.file_download_outlined,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
+                                    height: 65,
+                                    width: 95,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(11),
+                                        color: const Color.fromARGB(
+                                            76, 50, 33, 6)),
                                   ),
-                                  height: 65,
-                                  width: 95,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(11),
-                                      color:
-                                          const Color.fromARGB(76, 50, 33, 6)),
                                 ),
                               ],
                             )
@@ -408,6 +413,7 @@ class Homepage extends StatelessWidget {
                               shape: BoxShape.circle,
                               border:
                                   Border.all(color: Colors.black, width: 2)),
+                          child: Icon(Icons.save_alt_rounded),
                         ),
                         Container(
                           height: 45,
@@ -435,7 +441,7 @@ class Homepage extends StatelessWidget {
                               shape: BoxShape.circle,
                               border:
                                   Border.all(color: Colors.black, width: 2)),
-                          child: Icon(Icons.dataset_linked_outlined),
+                          child: Icon(Icons.account_balance_wallet_sharp),
                         ),
                       ],
                     ),
